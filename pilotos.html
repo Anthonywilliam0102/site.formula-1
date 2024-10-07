@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilotos de Fórmula 1</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       /* Corpo com fundo dark */
+body {
+    background-color: #121212; /* Preto fosco */
+    color: #e0e0e0; /* Cinza claro para texto */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Botões Voltar e Topo - Estilo Neon */
+.btn-voltar, .btn-topo {
+    position: fixed;
+    background-color: #1f1f1f; /* Fundo escuro */
+    color: #00ffcc; /* Neon verde-água */
+    border: 2px solid #00ffcc;
+    border-radius: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 255, 204, 0.6); /* Sombra neon */
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.btn-voltar {
+    top: 20px;
+    left: 20px;
+}
+
+.btn-voltar:hover, .btn-topo:hover {
+    background-color: #00ffcc; /* Neon ativo */
+    color: #121212; /* Texto escuro ao hover */
+    transform: translateY(-4px); /* Efeito de elevação */
+    box-shadow: 0px 8px 20px rgba(0, 255, 204, 0.8); /* Sombra neon mais intensa */
+}
+
+.btn-topo {
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
+
+/* Foco visível para acessibilidade */
+.btn-voltar:focus, .btn-topo:focus {
+    box-shadow: 0 0 0 4px rgba(0, 255, 204, 0.4); /* Destaque com neon no foco */
+}
+
+/* Drivers - Estilo dark com neon */
+.drivers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    background-color: #1b1b1b; /* Fundo escuro para a seção */
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+}
+
+.drivers ul {
+    list-style: none; /* Remove as bolinhas da lista */
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+.drivers li {
+    text-align: center;
+    flex: 1 0 30%;
+    max-width: 30%;
+    margin-bottom: 20px;
+}
+
+.drivers img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 255, 204, 0.3); /* Sombra suave neon */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.drivers img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 255, 204, 0.5); /* Neon mais intenso no hover */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .drivers li {
+        flex: 1 0 45%;
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .drivers li {
+        flex: 1 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Animação suave para exibir o botão de subir ao topo */
+.show-btn-topo {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Links com efeito neon */
+a {
+    color: #00ffcc; /* Cor neon verde-água */
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    color: #00ffe6; /* Um tom mais claro no hover */
+    text-shadow: 0 0 8px #00ffe6; /* Glow neon ao passar o mouse */
+}
+
+/* Adicionando fonte personalizada */
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif; /* Fonte moderna */
+    color: #00ffcc; /* Títulos em neon verde-água */
+}
+
+/* Scrollbar estilizada */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1f1f1f; /* Fundo escuro */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #00ffcc; /* Cor neon para o scroll */
+    border-radius: 4px;
+    border: 2px solid #1f1f1f; /* Bordas para efeito de contraste */
+}
+
+/* Tooltip moderno */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #00ffcc;
+    color: #121212;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Exibe o tooltip acima do elemento */
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="site.html">Home</a></li>
+                <li><a href="pilotos.html">Pilotos</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <button class="btn-voltar" onclick="window.history.back();">Início</button>
+    <button class="btn-topo" onclick="scrollToTop();">Voltar ao Topo</button>
+
+    <main>
+        <section class="drivers">
+            <h1>Os 6 Principais Pilotos de Fórmula 1</h1>
+            <ul>
+                <li>
+                    <img src="img/hamilton.jpg" alt="Lewis Hamilton">
+                    <h3>Lewis Hamilton</h3>
+                    <p>Equipe: Mercedes-AMG</p>
+                </li>
+                <li>
+                    <img src="img/maxversttapen.jpg" alt="Max Verstappen">
+                    <h3>Max Verstappen</h3>
+                    <p>Equipe: Red Bull Racing</p>
+                </li>
+                <li>
+                    <img src="img/leclerc.jpg" alt="Charles Leclerc">
+                    <h3>Charles Leclerc</h3>
+                    <p>Equipe: Ferrari</p>
+                </li>
+                <li>
+                    <img src="img/russell.jpg" alt="George Russell">
+                    <h3>George Russell</h3>
+                    <p>Equipe: Mercedes-AMG</p>
+                </li>
+                <li>
+                    <img src="img/norris.jpg" alt="Lando Norris">
+                    <h3>Lando Norris</h3>
+                    <p>Equipe: McLaren</p>
+                </li>
+                <li>
+                    <img src="img/sanz.jpg" alt="Carlos Sainz">
+                    <h3>Carlos Sainz</h3>
+                    <p>Equipe: Ferrari</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+    </footer>
+
+    <script>
+        // Função para rolar até o topo
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Mostrar/ocultar o botão "Voltar ao Topo" baseado na rolagem da página
+        window.onscroll = function() {
+            const btnTopo = document.querySelector('.btn-topo');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                btnTopo.style.display = 'block';
+            } else {
+                btnTopo.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>
