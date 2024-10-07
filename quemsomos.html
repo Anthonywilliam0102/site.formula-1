@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem Somos</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212; /* Fundo escuro */
+            color: #e0e0e0; /* Texto claro */
+            margin: 0;
+            padding: 20px;
+        }
+
+        .btn-voltar {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #ff5722; /* Laranja */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-weight: bold;
+            z-index: 1000; /* Para garantir que fique acima de outros elementos */
+            transition: background-color 0.3s ease; /* Transição suave */
+        }
+
+        .btn-voltar:hover {
+            background-color: #e64a19; /* Laranja escuro ao passar o mouse */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #1f1f1f; /* Fundo do container */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra mais suave */
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff9800; /* Cor vibrante para o título */
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #cd1928; /* Cor da Fórmula 1 */
+            margin-top: 20px; /* Margem superior */
+        }
+
+        p {
+            line-height: 1.6;
+            color: #bdbdbd; /* Texto um pouco mais claro */
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px; /* Alinhamento */
+            color: #bdbdbd; /* Texto da lista */
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+            font-size: 0.9em;
+        }
+
+        nav {
+            background-color: #1f1f1f; /* Fundo escuro do nav */
+            padding: 10px 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Sombra suave */
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-around; /* Espaçamento entre itens */
+            list-style: none;
+            padding: 0;
+        }
+
+        nav a {
+            color: #ff9800; /* Link na cor vibrante */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease; /* Transição suave */
+        }
+
+        nav a:hover {
+            color: #e68900; /* Cor do link ao passar o mouse */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="site.html">Início</a></li>
+                <li><a href="quemsomos.html">Quem Somos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <button class="btn-voltar" onclick="window.history.back();">Voltar</button>
+
+    <div class="container">
+        <h1>Quem Somos?</h1>
+        <h2>Nossa Missão</h2>
+        <p>Na Fórmula 1 news, nossa missão é proporcionar a todos os fãs de Fórmula 1 uma experiência única e emocionante, compartilhando as últimas notícias, análises, e informações sobre as corridas, pilotos e equipes. Queremos ser a sua fonte confiável para tudo relacionado ao mundo das corridas.</p>
+
+        <h2>Nossa Visão</h2>
+        <p>Estamos empenhados em criar uma comunidade apaixonada e informada sobre a Fórmula 1, onde os fãs possam se conectar, compartilhar suas opiniões e celebrar as emoções que as corridas trazem. Acreditamos que a Fórmula 1 é mais do que apenas um esporte; é uma paixão que une pessoas ao redor do mundo.</p>
+
+        <h2>Nossos Valores</h2>
+        <ul>
+            <li>Paixão: Amamos a Fórmula 1 e queremos compartilhar essa paixão com você.</li>
+            <li>Transparência: Comprometemo-nos a fornecer informações precisas e confiáveis.</li>
+            <li>Comunidade: Valorizamos a interação e o engajamento com nossos leitores.</li>
+            <li>Inovação: Estamos sempre em busca de novas maneiras de melhorar sua experiência conosco.</li>
+        </ul>
+
+        <h2>Junte-se a Nós!</h2>
+        <p>Se você é um fã de Fórmula 1 ou está apenas começando a explorar este emocionante mundo, convidamos você a se juntar a nós em nossa jornada. Fique por dentro das últimas novidades, participe de nossas discussões e celebre conosco a adrenalina das corridas!</p>
+
+        <div class="footer">
+            <p>&copy; News Fórmula 1</p>
+        </div>
+    </div>
+</body>
+
+</html>
