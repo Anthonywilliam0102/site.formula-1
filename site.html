@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Site Mobile, F1 2023, Responsividade">
+    <meta name="description" content="Site prático de Responsividade Mobile">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Ítalo Nunes">
+    
+    <title>F1 News - 2023</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Ícone do site -->
+    <link rel="icon" href="img/icon1.jpg" type="image/x-icon">
+    
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <img src="data:image/png;base64,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" alt="F1 logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="pistas.html">Pistas</a></li>
+                <li><a href="quemsomos.html">Quem somos?</a></li>
+                <li><a href="pilotos.html">Pilotos</a></li>
+                
+            </ul>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <section class="banner">
+        <div class="container">
+            <div class="banner-content">
+                <h1>Lideranças da Fórmula 1</h1>
+                <p>As maiores potências da fórmula 1 nos últimos anos!</p>
+                <a href="cadastrar.html" class="btn">Cadastre-se <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section class="servicos container">
+        <div class="servico">
+            <img src="img/imagem 3 F1.jpeg" alt="SF-23 Ferrari">
+            <div class="servico-content">
+                <h3>SF-23 Ferrari</h3>
+                <p>O SF-23 é o carro da Ferrari para a temporada de Fórmula 1 de 2023, com um motor V6 turbo híbrido atualizado.</p>
+            </div>
+        </div>
+
+        <div class="servico">
+            <img src="img/imagem 1 F1.jpeg" alt="W14 Mercedes">
+            <div class="servico-content">
+                <h3>W14 Mercedes</h3>
+                <p>O W14, carro da Mercedes-AMG Petronas para 2023, combina potência e eficiência com um motor V6 turbo híbrido.</p>
+            </div>
+        </div>
+
+        <div class="servico">
+            <img src="img/imagem 4 F1.jpeg" alt="RB-19 Red Bull">
+            <div class="servico-content">
+                <h3>RB-19 Red Bull</h3>
+                <p>O RB19 destaca-se por seu design inovador e motor V6 turbo híbrido, equilibrando potência e eficiência.</p>
+            </div>
+        </div>
+
+        <div class="servico">
+            <img src="img/imagem 6 F1.jpeg" alt="MCL60 McLaren">
+            <div class="servico-content">
+                <h3>MCL60 McLaren</h3>
+                <p>O McLaren MCL60, com motor V6 turbo híbrido, é o carro da equipe para a temporada de 2023.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h3>Receba novidades, dicas e muito mais</h3>
+            <form>
+                <input type="email" placeholder="Seu email" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="container">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-google"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2023 Fórmula 1 News. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
