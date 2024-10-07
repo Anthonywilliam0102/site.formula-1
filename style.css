@@ -1,0 +1,203 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo em modo dark */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #1f1f1f;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links li a:hover {
+    color: #f39c12;
+}
+
+/* Menu mobile */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #e0e0e0;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Banner */
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/banner.jpg') center/cover no-repeat;
+    padding: 4rem 0;
+    text-align: center;
+    color: #fff;
+}
+
+.banner-content {
+    max-width: 700px;
+    margin: auto;
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.banner .btn {
+    background-color: #f39c12;
+    color: #121212;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.banner .btn:hover {
+    background-color: #d35400;
+}
+
+/* Serviços */
+.servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.servico {
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.servico img {
+    width: 100%;
+    height: auto;
+}
+
+.servico-content {
+    padding: 1.5rem;
+}
+
+.servico h3 {
+    margin-bottom: 0.75rem;
+}
+
+.servico p {
+    font-size: 0.9rem;
+    color: #b3b3b3;
+}
+
+.servico:hover {
+    transform: scale(1.05);
+}
+
+/* Newsletter */
+.newsletter {
+    background-color: #333;
+    padding: 2rem 0;
+    text-align: center;
+    color: #fff;
+}
+
+.newsletter input {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    margin-right: 1rem;
+    width: 250px;
+    max-width: 100%;
+}
+
+.newsletter button {
+    padding: 0.75rem 1.5rem;
+    background-color: #f39c12;
+    color: #121212;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.newsletter button:hover {
+    background-color: #d35400;
+}
+
+/* Rodapé */
+.rodape {
+    background-color: #1f1f1f;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.social-icons a {
+    color: #e0e0e0;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #f39c12;
+}
+
+.rodape p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #b3b3b3;
+}
+
+
